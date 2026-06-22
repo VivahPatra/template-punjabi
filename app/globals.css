@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* ── Custom cursor ── */
+body { cursor: none; }
+* { cursor: none !important; }
+
+@theme inline {
+  --font-display: var(--font-playfair);
+  --font-serif: var(--font-lora);
+  --font-sans: var(--font-inter);
+  --font-devanagari: var(--font-playfair);
+}
+
+:root {
+  /* Punjabi — turmeric & deep plum */
+  --color-bg:        #1a0e1e;
+  --color-surface:   #261628;
+  --color-surface2:  #1e1020;
+  --color-surface3:  #321e38;
+
+  --color-accent:    #e8a820;   /* turmeric gold */
+  --color-accent2:   #f0c850;   /* bright haldi */
+  --color-accent3:   #9a3070;   /* plum pink */
+  --color-accent4:   #c41e3a;   /* Punjabi red */
+
+  --color-text:      #fdf0d5;   /* warm cream */
+  --color-muted:     #9a7a8a;   /* mauve */
+  --color-border:    rgba(232, 168, 32, 0.25);
+  --color-border-strong: rgba(232, 168, 32, 0.5);
+
+  --color-glow:      rgba(232, 168, 32, 0.15);
+  --color-glow-strong: rgba(232, 168, 32, 0.4);
+  --color-glow-lotus: rgba(240, 200, 80, 0.45);
+}
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes floatSlow   { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-10px)} }
+@keyframes floatMed    { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-6px)}  }
+@keyframes floatEmoji  { 0%,100%{transform:translateY(0) rotate(-2deg)} 50%{transform:translateY(-5px) rotate(2deg)} }
+@keyframes rotateSlow  { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes rotateSlowCCW { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
+@keyframes shimmer     { 0%{background-position:200% center} 100%{background-position:-200% center} }
+@keyframes glowPulse   { 0%,100%{opacity:0.6} 50%{opacity:1} }
+@keyframes lotusBloom  { 0%{transform:scale(0.8) rotate(-5deg);opacity:0} 100%{transform:scale(1) rotate(0deg);opacity:1} }
+@keyframes goldPulse   { 0%,100%{box-shadow:0 0 12px rgba(200,146,42,0.2)} 50%{box-shadow:0 0 40px rgba(200,146,42,0.55)} }
+@keyframes petalDrop   { 0%{transform:translateY(-20px) rotate(0deg);opacity:0} 20%{opacity:1} 100%{transform:translateY(100vh) rotate(360deg);opacity:0} }
+@keyframes inkDraw     { from{stroke-dashoffset:600} to{stroke-dashoffset:0} }
+@keyframes orbFloat    { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-20px) scale(1.05)} }
+
+/* ── Utility classes ────────────────────────────────────────── */
+.float-slow    { animation: floatSlow 4s ease-in-out infinite; }
+.float-med     { animation: floatMed  3s ease-in-out infinite; }
+.float-emoji   { animation: floatEmoji 3.5s ease-in-out infinite; }
+.rotate-slow   { animation: rotateSlow 20s linear infinite; }
+.rotate-slow-ccw { animation: rotateSlowCCW 16s linear infinite; }
+.glow-pulse    { animation: glowPulse 3s ease-in-out infinite; }
+.gold-pulse    { animation: goldPulse 3s ease-in-out infinite; }
+.lotus-bloom   { animation: lotusBloom 1.2s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    #f5d870 30%,
+    #fff0a0 50%,
+    #f5d870 70%,
+    var(--color-accent) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.glow-text {
+  text-shadow: 0 0 20px var(--color-glow-strong), 0 0 40px var(--color-glow);
+}
+
+.pichwai-border {
+  border: 1px solid var(--color-border);
+  box-shadow: 0 0 0 3px rgba(200,146,42,0.06), inset 0 0 0 1px rgba(200,146,42,0.04);
+}
+
+.gold-border {
+  border: 1.5px solid var(--color-border-strong);
+  box-shadow: 0 0 20px var(--color-glow), inset 0 0 20px rgba(200,146,42,0.04);
+}
+
+.pichwai-shadow {
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 0 0 1px var(--color-border);
+}
+
+/* ── Ganesha glow ── */
+@keyframes ganeshGlow {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(201,168,76,0.8)) drop-shadow(0 0 20px rgba(201,168,76,0.35)); }
+  50%       { filter: drop-shadow(0 0 18px rgba(255,210,80,1)) drop-shadow(0 0 44px rgba(201,168,76,0.7)); }
+}
+.ganesha-glow {
+  animation: ganeshGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes ganeshBackdrop {
+  0%, 100% { opacity: 0.55; transform: scale(1.3); }
+  50%       { opacity: 1;    transform: scale(1.7); }
+}
+.ganesha-backdrop {
+  animation: ganeshBackdrop 2.5s ease-in-out infinite;
+}
