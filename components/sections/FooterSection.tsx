@@ -1,9 +1,11 @@
 'use client'
 import { motion } from 'framer-motion'
-import { weddingData } from '@/data/wedding-data'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import LotusDivider from '@/components/ui/LotusDivider'
 
 export default function FooterSection() {
+  const weddingData = useWeddingData()
+
   return (
     <footer id="footer" className="pt-20 px-6 text-center relative overflow-hidden" style={{ background: 'var(--color-surface2)' }}>
       <div className="max-w-2xl mx-auto relative z-10">

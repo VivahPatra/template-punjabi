@@ -1,11 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
-import { weddingData } from '@/data/wedding-data'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
 export default function InvitationSection() {
+  const weddingData = useWeddingData()
+
   return (
     <section id="invitation" className="relative overflow-hidden py-28 px-6" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />

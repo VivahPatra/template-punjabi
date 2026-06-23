@@ -1,11 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
-import { weddingData } from '@/data/wedding-data'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, slideLeft, slideRight, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
 export default function CoupleStory() {
+  const weddingData = useWeddingData()
+
   return (
     <section id="story" className="relative overflow-hidden py-28 px-6" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />

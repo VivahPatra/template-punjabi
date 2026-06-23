@@ -2,11 +2,12 @@
 import { useRef } from 'react'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { weddingData } from '@/data/wedding-data'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import { formatShortDate } from '@/lib/utils'
 
 export default function HeroSection() {
+  const weddingData = useWeddingData()
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
 
