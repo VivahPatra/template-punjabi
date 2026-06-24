@@ -2,12 +2,13 @@
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { MessageCircle } from 'lucide-react'
-import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
+import EditableText from '@/components/ui/EditableText'
 
 export default function RSVPSection() {
-  const weddingData = useWeddingData()
+  const { data: weddingData } = useEditMode()
   const whatsapp = `https://wa.me/${weddingData.rsvp.whatsappNumber}?text=${encodeURIComponent(weddingData.rsvp.message)}`
 
   return (
@@ -29,11 +30,11 @@ export default function RSVPSection() {
           className="relative rounded-2xl p-10 text-center"
           style={{ background: 'var(--color-bg)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 40px var(--color-glow), 0 20px 50px rgba(0,0,0,0.4)' }}
         >
-          <p className="font-serif text-base leading-relaxed mb-3" style={{ color: 'var(--color-muted)' }}>
+          <EditableText field="rsvp.message" tag="p" className="font-serif text-base leading-relaxed mb-3" style={{ color: 'var(--color-muted)' }} multiline>
             We joyfully request the honour of your presence at our wedding celebration.
-          </p>
+          </EditableText>
           <p className="font-sans text-sm mb-8" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
-            Please RSVP by {weddingData.rsvp.deadline}
+            Please RSVP by <EditableText field="rsvp.deadline">{weddingData.rsvp.deadline}</EditableText>
           </p>
 
           <div className="flex justify-center">

@@ -107,3 +107,20 @@ body { cursor: none; }
 .ganesha-backdrop {
   animation: ganeshBackdrop 2.5s ease-in-out infinite;
 }
+
+/* ── Editable highlight (edit mode) ──────────────────────────── */
+.editable-highlight {
+  position: relative;
+  border-bottom: 1px dashed rgba(232,168,32,0.5);
+  transition: background-color 0.2s, border-color 0.2s;
+  border-radius: 2px;
+}
+.editable-highlight:hover {
+  background-color: rgba(232,168,32,0.08);
+  border-bottom-color: rgba(232,168,32,0.7);
+}
+.editable-highlight:focus {
+  background-color: rgba(232,168,32,0.12);
+  border-bottom-color: var(--color-accent);
+  outline: none;
+}

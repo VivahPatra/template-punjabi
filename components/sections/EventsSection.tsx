@@ -2,16 +2,19 @@
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import LotusDivider from '@/components/ui/LotusDivider'
-import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
 import type { WeddingEvent } from '@/types/wedding.types'
 import { fadeUp, staggerContainer } from '@/lib/animations'
+import EditableText from '@/components/ui/EditableText'
 
 function EventNode({
   event,
+  eventIndex,
   isHero = false,
   delay = 0,
 }: {
   event: WeddingEvent
+  eventIndex: number
   isHero?: boolean
   delay?: number
 }) {
@@ -40,7 +43,7 @@ function EventNode({
           style={{ boxShadow: `0 0 60px 22px ${color}55` }}
         />
 
-        {/* Dashed ring — spins on hover */}
+        {/* Dashed ring -- spins on hover */}
         <div
           className="absolute rounded-full group-hover:[animation:spin_6s_linear_infinite]"
           style={{ inset: -3, border: `1.5px dashed ${color}`, opacity: 0.5 }}
@@ -81,21 +84,18 @@ function EventNode({
 
       {/* Name + date */}
       <div className="text-center mt-3">
-        <p
-          className="font-display tracking-wide glow-text"
-          style={{ color: 'var(--color-text)', fontSize: isHero ? '1.25rem' : '1rem' }}
-        >
+        <EditableText field="name" index={eventIndex} arrayField="events" tag="p" className="font-display tracking-wide glow-text" style={{ color: 'var(--color-text)', fontSize: isHero ? '1.25rem' : '1rem' }}>
           {event.name}
-        </p>
+        </EditableText>
         <p
           className="font-sans text-xs tracking-widest mt-0.5"
           style={{ color, opacity: 0.7 }}
         >
-          {event.date.split(',')[0]} · {event.time}
+          <EditableText field="date" index={eventIndex} arrayField="events">{event.date.split(',')[0]}</EditableText> · <EditableText field="time" index={eventIndex} arrayField="events">{event.time}</EditableText>
         </p>
       </div>
 
-      {/* Detail panel — always visible */}
+      {/* Detail panel -- always visible */}
       <div
         className="text-center mt-3 rounded-xl px-3 py-3"
         style={{
@@ -105,16 +105,16 @@ function EventNode({
           boxShadow: `0 0 14px ${color}1a`,
         }}
       >
-        <p className="font-serif text-sm" style={{ color: 'var(--color-text)', opacity: 0.85 }}>
+        <EditableText field="venue" index={eventIndex} arrayField="events" tag="p" className="font-serif text-sm" style={{ color: 'var(--color-text)', opacity: 0.85 }}>
           {event.venue}
-        </p>
-        <p className="font-sans text-xs mt-1" style={{ color: 'var(--color-muted)', opacity: 0.7 }}>
+        </EditableText>
+        <EditableText field="venueAddress" index={eventIndex} arrayField="events" tag="p" className="font-sans text-xs mt-1" style={{ color: 'var(--color-muted)', opacity: 0.7 }}>
           {event.venueAddress.split(',')[0]}
-        </p>
+        </EditableText>
         {event.description && (
-          <p className="font-serif text-xs italic mt-1.5" style={{ color: 'var(--color-muted)', opacity: 0.65 }}>
+          <EditableText field="description" index={eventIndex} arrayField="events" tag="p" className="font-serif text-xs italic mt-1.5" style={{ color: 'var(--color-muted)', opacity: 0.65 }}>
             {event.description}
-          </p>
+          </EditableText>
         )}
         <a
           href={mapUrl}
@@ -123,7 +123,7 @@ function EventNode({
           className="inline-block mt-2 font-sans text-xs tracking-wider underline underline-offset-2 hover:opacity-100 transition-opacity duration-200"
           style={{ color, opacity: 0.85 }}
         >
-          📍 View on Maps
+          View on Maps
         </a>
       </div>
     </motion.article>
@@ -131,7 +131,7 @@ function EventNode({
 }
 
 export default function EventsSection() {
-  const weddingData = useWeddingData()
+  const { data: weddingData } = useEditMode()
   const events = weddingData.events
   const half = Math.ceil(events.length / 2)
   const row1 = events.slice(0, half)
@@ -188,16 +188,17 @@ export default function EventsSection() {
           {/* Row 1 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-10 md:relative md:z-10">
             {row1.map((ev, i) => (
-              <EventNode key={ev.id} event={ev} delay={i * 0.1} />
+              <EventNode key={ev.id} event={ev} eventIndex={i} delay={i * 0.1} />
             ))}
           </div>
 
-          {/* Row 2 — centered on desktop, stacked on mobile */}
+          {/* Row 2 -- centered on desktop, stacked on mobile */}
           <div className="flex flex-col md:flex-row md:justify-center items-center gap-10 md:gap-20 mt-8 md:mt-10 md:relative md:z-10">
             {row2.map((ev, i) => (
               <EventNode
                 key={ev.id}
                 event={ev}
+                eventIndex={half + i}
                 isHero={ev.id === 'wedding'}
                 delay={0.15 + i * 0.1}
               />

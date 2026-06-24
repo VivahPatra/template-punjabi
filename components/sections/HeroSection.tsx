@@ -2,12 +2,13 @@
 import { useRef } from 'react'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import { formatShortDate } from '@/lib/utils'
+import EditableText from '@/components/ui/EditableText'
 
 export default function HeroSection() {
-  const weddingData = useWeddingData()
+  const { data: weddingData } = useEditMode()
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
 
@@ -55,7 +56,7 @@ export default function HeroSection() {
           backgroundPosition: '0 0, 15px 15px',
         }} />
 
-      {/* Glow orbs — turmeric & plum */}
+      {/* Glow orbs -- turmeric & plum */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <div className="absolute w-96 h-96 rounded-full blur-[140px] float-slow"
           style={{ background: 'rgba(232,168,32,0.12)', top: '10%', left: '5%' }} />
@@ -88,18 +89,18 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mb-6">
-          <h1 className="font-display leading-none shimmer-text" style={{ fontSize: 'clamp(2.5rem, 10vw, 7rem)' }}>
+          <EditableText field="groomName" tag="h1" className="font-display leading-none shimmer-text" style={{ fontSize: 'clamp(2.5rem, 10vw, 7rem)' }}>
             {weddingData.groomName}
-          </h1>
+          </EditableText>
           <span
             className="block my-3 float-slow font-display"
             style={{ color: 'var(--color-accent2)', fontSize: 'clamp(1.2rem, 3vw, 2rem)' }}
           >
             &amp;
           </span>
-          <h1 className="font-display leading-none shimmer-text" style={{ fontSize: 'clamp(2.5rem, 10vw, 7rem)' }}>
+          <EditableText field="brideName" tag="h1" className="font-display leading-none shimmer-text" style={{ fontSize: 'clamp(2.5rem, 10vw, 7rem)' }}>
             {weddingData.brideName}
-          </h1>
+          </EditableText>
         </motion.div>
 
         <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-8">
@@ -110,13 +111,9 @@ export default function HeroSection() {
           <div className="h-px w-16 md:w-24" style={{ background: 'linear-gradient(to left, transparent, var(--color-accent))' }} />
         </motion.div>
 
-        <motion.p
-          variants={fadeUp}
-          className="font-sans text-base opacity-60 tracking-widest"
-          style={{ color: 'var(--color-text)' }}
-        >
+        <EditableText field="tagline" tag="p" className="font-sans text-base opacity-60 tracking-widest" style={{ color: 'var(--color-text)' }}>
           {weddingData.tagline}
-        </motion.p>
+        </EditableText>
 
         <motion.div variants={fadeUp} className="flex flex-col items-center mt-6" style={{ scale: goldenScale }}>
           <img src="/assets/golden.png" alt="" style={{ width: 200, height: 'auto', opacity: 0.85, filter: 'brightness(1.2)' }} />
@@ -158,7 +155,7 @@ export default function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Water body — bottom of hero, matching golden reflection style */}
+      {/* Water body -- bottom of hero, matching golden reflection style */}
       <div className="absolute bottom-10 left-3 right-3 md:bottom-16 md:left-6 md:right-6 pointer-events-none overflow-hidden" style={{ height: '35%' }} aria-hidden>
         <style>{`
           @keyframes diyaFloat {
@@ -179,7 +176,7 @@ export default function HeroSection() {
           position: 'absolute', inset: 0,
           background: 'linear-gradient(180deg, transparent 0%, rgba(26,14,30,0.5) 15%, rgba(26,14,30,0.75) 40%, rgba(26,14,30,0.9) 70%, var(--color-bg) 100%)',
         }} />
-        {/* Floating diyas — scale inward as golden grows */}
+        {/* Floating diyas -- scale inward as golden grows */}
         {[
           { left: 'calc(10% + 35px)', top: '20%', size: 18, dur: 3.5, delay: 0, mobile: true },
           { left: '60%', top: '25%', size: 22, dur: 4.0, delay: 0.7, mobile: true },
@@ -224,7 +221,7 @@ export default function HeroSection() {
                 background: 'radial-gradient(ellipse, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, transparent 75%)',
                 filter: 'blur(3px)',
               }} />
-              {/* Fixed ripple rings — tighter */}
+              {/* Fixed ripple rings -- tighter */}
               <div style={{ position: 'absolute', left: '50%', bottom: d.size * 0.12, transform: 'translateX(-50%)', zIndex: 1 }}>
                 <div style={{ width: d.size * 1.2, height: d.size * 0.2, borderRadius: '50%', border: '1px solid rgba(232,168,32,0.25)' }} />
                 <div style={{ position: 'absolute', top: -2, left: -5, right: -5, bottom: -2, borderRadius: '50%', border: '0.5px solid rgba(232,168,32,0.12)' }} />

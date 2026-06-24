@@ -1,12 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
-import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
 import { fadeUp, slideLeft, slideRight, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
+import EditableText from '@/components/ui/EditableText'
 
 export default function CoupleStory() {
-  const weddingData = useWeddingData()
+  const { data: weddingData } = useEditMode()
 
   return (
     <section id="story" className="relative overflow-hidden py-28 px-6" style={{ background: 'var(--color-surface)' }}>
@@ -55,9 +56,15 @@ export default function CoupleStory() {
                       </motion.div>
                     )}
                     {/* Text */}
-                    <p className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-accent)', opacity: 0.65 }}>{milestone.date}</p>
-                    <h3 className="font-display text-2xl mb-2 glow-text" style={{ color: 'var(--color-accent)' }}>{milestone.title}</h3>
-                    <p className="font-serif text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>{milestone.description}</p>
+                    <EditableText field="date" index={idx} arrayField="coupleStory" tag="p" className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-accent)', opacity: 0.65 }}>
+                      {milestone.date}
+                    </EditableText>
+                    <EditableText field="title" index={idx} arrayField="coupleStory" tag="h3" className="font-display text-2xl mb-2 glow-text" style={{ color: 'var(--color-accent)' }}>
+                      {milestone.title}
+                    </EditableText>
+                    <EditableText field="description" index={idx} arrayField="coupleStory" tag="p" className="font-serif text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }} multiline>
+                      {milestone.description}
+                    </EditableText>
                   </div>
 
                   {/* Timeline node */}

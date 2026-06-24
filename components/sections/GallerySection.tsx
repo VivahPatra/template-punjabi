@@ -3,7 +3,7 @@ import { useState } from 'react'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
-import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
@@ -14,7 +14,7 @@ function imgWidth(span: string | undefined) {
 }
 
 export default function GallerySection() {
-  const weddingData = useWeddingData()
+  const { data: weddingData } = useEditMode()
   const [selected, setSelected] = useState<string | null>(null)
 
   return (
@@ -34,7 +34,7 @@ export default function GallerySection() {
         </motion.div>
       </div>
 
-      {/* Horizontal filmstrip — auto-scrolling */}
+      {/* Horizontal filmstrip -- auto-scrolling */}
       <style>{`
         @keyframes galleryScroll {
           0%   { transform: translateX(0); }
