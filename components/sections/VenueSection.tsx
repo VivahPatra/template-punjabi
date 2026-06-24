@@ -1,13 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
-import { useEditMode } from '@/context/EditModeContext'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
-import EditableText from '@/components/ui/EditableText'
 
 export default function VenueSection() {
-  const { data: weddingData } = useEditMode()
+  const weddingData = useWeddingData()
 
   return (
     <section id="venue" className="relative overflow-hidden py-28 px-6" style={{ background: 'var(--color-surface2)' }}>
@@ -32,12 +31,8 @@ export default function VenueSection() {
           {/* Header */}
           <div className="py-12 px-8 text-center" style={{ background: 'linear-gradient(135deg, var(--color-surface2), var(--color-surface))' }}>
             <div className="text-5xl mb-4 float-slow">🏛️</div>
-            <EditableText field="venue.name" tag="h3" className="font-display text-3xl glow-text mb-2" style={{ color: 'var(--color-accent)' }}>
-              {weddingData.venue.name}
-            </EditableText>
-            <EditableText field="venue.address" tag="p" className="font-sans text-sm" style={{ color: 'var(--color-muted)' }}>
-              {weddingData.venue.address}
-            </EditableText>
+            <h3 className="font-display text-3xl glow-text mb-2" style={{ color: 'var(--color-accent)' }}>{weddingData.venue.name}</h3>
+            <p className="font-sans text-sm" style={{ color: 'var(--color-muted)' }}>{weddingData.venue.address}</p>
           </div>
 
           {/* Events at venue */}
@@ -58,7 +53,7 @@ export default function VenueSection() {
                   <div>
                     <p className="font-display text-base" style={{ color: 'var(--color-text)' }}>{e.name}</p>
                     <p className="font-sans text-xs" style={{ color: 'var(--color-muted)' }}>{e.date} · {e.time}</p>
-                    <p className="font-sans text-xs mt-0.5" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>{e.venueAddress}</p>
+                    <p className="font-sans text-xs mt-0.5" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>📍 {e.venueAddress}</p>
                   </div>
                 </a>
               ))}
@@ -75,7 +70,7 @@ export default function VenueSection() {
                 whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(200,146,42,0.6)' }}
                 whileTap={{ scale: 0.97 }}
               >
-                Get Directions
+                📍 Get Directions
               </motion.a>
             </div>
           </div>
@@ -100,7 +95,7 @@ export default function VenueSection() {
               </div>
               <p className="font-sans text-sm font-medium mb-0.5" style={{ color: 'var(--color-text)', opacity: 0.85 }}>{e.venue}</p>
               <p className="font-sans text-xs" style={{ color: 'var(--color-muted)' }}>{e.venueAddress}</p>
-              <p className="font-sans text-xs mt-1" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>{e.date} · {e.time}</p>
+              <p className="font-sans text-xs mt-1" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>📍 {e.date} · {e.time}</p>
             </motion.a>
           ))}
         </motion.div>
