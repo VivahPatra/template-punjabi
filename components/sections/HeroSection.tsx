@@ -84,7 +84,7 @@ export default function HeroSection() {
           className="font-sans text-xs tracking-[0.4em] uppercase mt-20 mb-8 glow-pulse"
           style={{ color: 'var(--color-accent)', opacity: 0.7 }}
         >
-          ✦ &nbsp; Sat Sri Akal &nbsp; ✦
+          {weddingData.heroSubtitle || '✦   Sat Sri Akal   ✦'}
         </motion.p>
 
         <motion.div variants={fadeUp} className="mb-6">
