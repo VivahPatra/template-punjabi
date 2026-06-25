@@ -109,5 +109,10 @@
 }
 
 /* Light text on saffron surface sections */
-.on-saffron { color: #fff8f0; }
-.on-saffron .glow-pulse { color: #fdf5e8; }
+.on-saffron { color: #2a1810; }
+.on-saffron .shimmer-text {
+  background: linear-gradient(90deg, #2a1810 0%, #fdf5e8 30%, #fff 50%, #fdf5e8 70%, #2a1810 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

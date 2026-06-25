@@ -43,7 +43,7 @@ export default function HeroSection() {
         />
         <div className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(154,48,112,0.12) 0%, transparent 60%), linear-gradient(180deg, var(--color-bg) 0%, transparent 30%, transparent 65%, var(--color-bg) 100%)',
+            background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(232,120,48,0.12) 0%, transparent 60%), linear-gradient(180deg, var(--color-bg) 0%, transparent 30%, transparent 65%, var(--color-bg) 100%)',
           }} />
       </div>
 
@@ -177,7 +177,7 @@ export default function HeroSection() {
         {/* Water gradient */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(180deg, transparent 0%, rgba(26,14,30,0.5) 15%, rgba(26,14,30,0.75) 40%, rgba(26,14,30,0.9) 70%, var(--color-bg) 100%)',
+          background: 'linear-gradient(180deg, transparent 0%, rgba(232,120,48,0.3) 15%, rgba(232,120,48,0.55) 40%, rgba(232,120,48,0.8) 70%, var(--color-bg) 100%)',
         }} />
         {/* Floating diyas — scale inward as golden grows */}
         {[
