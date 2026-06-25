@@ -12,27 +12,25 @@
 }
 
 :root {
-  /* Punjabi — cream & gold traditional */
-  --color-bg:        #f5efe0;
-  --color-surface:   #3a2a1e;   /* warm brown for alternate sections */
-  --color-surface2:  #f0e8d8;
-  --color-surface3:  #2e2016;   /* deeper brown */
-
-  --color-water:     linear-gradient(180deg, #c49a2a 0%, #d4a830 40%, #e8c050 100%);  /* gold gradient for water */
+  /* Punjabi — Saffron & Cream */
+  --color-bg:        #fdf5e8;   /* warm cream */
+  --color-surface:   #e87830;   /* saffron */
+  --color-surface2:  #f5ede0;   /* soft cream */
+  --color-surface3:  #d06828;   /* deep saffron */
 
   --color-accent:    #c49a2a;   /* deep gold */
-  --color-accent2:   #d4a830;   /* bright gold */
-  --color-accent3:   #8b2a3a;   /* wedding maroon */
-  --color-accent4:   #c41e3a;   /* Punjabi red */
+  --color-accent2:   #e8a020;   /* orange gold */
+  --color-accent3:   #c41e3a;   /* Punjabi red */
+  --color-accent4:   #e87830;   /* saffron */
 
-  --color-text:      #2a2018;   /* dark brown */
-  --color-muted:     #8a7a68;   /* dusty brown */
-  --color-border:    rgba(196, 154, 42, 0.2);
-  --color-border-strong: rgba(196, 154, 42, 0.45);
+  --color-text:      #2a1810;   /* dark brown */
+  --color-muted:     #8a7060;   /* warm gray */
+  --color-border:    rgba(196, 154, 42, 0.25);
+  --color-border-strong: rgba(196, 154, 42, 0.5);
 
-  --color-glow:      rgba(196, 154, 42, 0.1);
-  --color-glow-strong: rgba(196, 154, 42, 0.3);
-  --color-glow-lotus: rgba(196, 154, 42, 0.25);
+  --color-glow:      rgba(232, 120, 48, 0.12);
+  --color-glow-strong: rgba(232, 120, 48, 0.35);
+  --color-glow-lotus: rgba(232, 160, 32, 0.3);
 }
 
 /* ── Keyframes ─────────────────────────────────────────────── */
@@ -62,11 +60,11 @@
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    #2a2018 0%,
-    var(--color-accent) 30%,
-    #d4a830 50%,
-    var(--color-accent) 70%,
-    #2a2018 100%
+    #2a1810 0%,
+    #e87830 30%,
+    #e8a020 50%,
+    #e87830 70%,
+    #2a1810 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -110,6 +108,6 @@
   animation: ganeshBackdrop 2.5s ease-in-out infinite;
 }
 
-/* Light text on brown surface sections */
-.on-brown { color: #f5efe0; }
-.on-brown .glow-pulse { color: #c49a2a; }
+/* Light text on saffron surface sections */
+.on-saffron { color: #fff8f0; }
+.on-saffron .glow-pulse { color: #fdf5e8; }

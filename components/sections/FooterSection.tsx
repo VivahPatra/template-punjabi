@@ -44,7 +44,7 @@ export default function FooterSection() {
         `}</style>
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(180deg, transparent 0%, rgba(58,42,30,0.6) 30%, rgba(58,42,30,0.85) 100%)',
+          background: 'linear-gradient(180deg, transparent 0%, rgba(208,104,40,0.6) 30%, rgba(208,104,40,0.85) 100%)',
         }} />
         {[
           { left: '5%',  size: 36, dur: 3.5 },

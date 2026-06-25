@@ -11,7 +11,7 @@ export default function RSVPSection() {
   const whatsapp = `https://wa.me/${weddingData.rsvp.whatsappNumber}?text=${encodeURIComponent(weddingData.rsvp.message)}`
 
   return (
-    <section id="rsvp" className="relative overflow-hidden py-28 px-6 on-brown" style={{ background: 'var(--color-surface)' }}>
+    <section id="rsvp" className="relative overflow-hidden py-28 px-6 on-saffron" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />
       <div className="max-w-2xl mx-auto relative z-10">
         <motion.div className="text-center mb-14" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
