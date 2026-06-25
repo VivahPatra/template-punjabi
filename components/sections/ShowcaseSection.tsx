@@ -5,7 +5,7 @@ import { fadeUp, staggerContainer } from '@/lib/animations'
 
 export default function ShowcaseSection() {
   return (
-    <section className="relative overflow-hidden z-[6]" style={{ background: 'var(--color-bg)' }}>
+    <section className="relative overflow-hidden z-[6]" style={{ background: '#1a0e10' }}>
       <FlowerOverlay />
 
       {/* Sky rockets — launch from bottom, burst at top */}
@@ -85,19 +85,19 @@ export default function ShowcaseSection() {
         {/* Top trapezoid */}
         <div className="absolute inset-0" style={{
           clipPath: 'polygon(0 0, 100% 0, 65% 18%, 35% 18%)',
-          background: 'linear-gradient(to bottom, rgba(15,8,18,1) 0%, rgba(35,18,42,0.8) 100%)',
+          background: 'linear-gradient(to bottom, rgba(26,14,16,1) 0%, rgba(60,30,20,0.8) 100%)',
         }} />
 
         {/* Bottom trapezoid */}
         <div className="absolute inset-0" style={{
           clipPath: 'polygon(35% 82%, 65% 82%, 100% 100%, 0 100%)',
-          background: 'linear-gradient(to top, rgba(15,8,18,1) 0%, rgba(35,18,42,0.8) 100%)',
+          background: 'linear-gradient(to top, rgba(26,14,16,1) 0%, rgba(60,30,20,0.8) 100%)',
         }} />
 
         {/* Left trapezoid — wider, with shading */}
         <div className="absolute inset-0" style={{
           clipPath: 'polygon(0 0, 35% 18%, 35% 82%, 0 100%)',
-          background: 'linear-gradient(135deg, rgba(10,5,14,1) 0%, rgba(25,12,32,0.95) 30%, rgba(40,22,48,0.7) 70%, rgba(50,28,58,0.5) 100%)',
+          background: 'linear-gradient(135deg, rgba(26,14,16,1) 0%, rgba(50,25,18,0.95) 30%, rgba(70,35,22,0.7) 70%, rgba(90,45,28,0.5) 100%)',
         }} />
         {/* Left wall inner shadow */}
         <div className="absolute inset-0 pointer-events-none" style={{
@@ -108,7 +108,7 @@ export default function ShowcaseSection() {
         {/* Right trapezoid — wider, with shading */}
         <div className="absolute inset-0" style={{
           clipPath: 'polygon(65% 18%, 100% 0, 100% 100%, 65% 82%)',
-          background: 'linear-gradient(225deg, rgba(10,5,14,1) 0%, rgba(25,12,32,0.95) 30%, rgba(40,22,48,0.7) 70%, rgba(50,28,58,0.5) 100%)',
+          background: 'linear-gradient(225deg, rgba(26,14,16,1) 0%, rgba(50,25,18,0.95) 30%, rgba(70,35,22,0.7) 70%, rgba(90,45,28,0.5) 100%)',
         }} />
         {/* Right wall inner shadow */}
         <div className="absolute inset-0 pointer-events-none" style={{
