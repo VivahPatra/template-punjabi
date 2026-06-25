@@ -25,7 +25,7 @@ export default function VenueSection() {
         <motion.div
           variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
           className="relative rounded-2xl overflow-hidden"
-          style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 40px rgba(200,146,42,0.08), 0 20px 50px rgba(0,0,0,0.4)' }}
+          style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 40px rgba(200,146,42,0.08), 0 20px 50px rgba(0,0,0,0.06)' }}
         >
 
           {/* Header */}
@@ -66,7 +66,7 @@ export default function VenueSection() {
                 href={weddingData.venue.mapUrl}
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-3 rounded-full font-sans text-sm font-semibold tracking-wider uppercase"
-                style={{ background: 'var(--color-accent)', color: '#080f1a', boxShadow: '0 0 24px rgba(200,146,42,0.4)' }}
+                style={{ background: 'var(--color-accent)', color: '#fff', boxShadow: '0 0 24px rgba(200,146,42,0.4)' }}
                 whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(200,146,42,0.6)' }}
                 whileTap={{ scale: 0.97 }}
               >

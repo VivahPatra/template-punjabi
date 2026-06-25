@@ -12,25 +12,25 @@
 }
 
 :root {
-  /* Punjabi — turmeric & deep plum */
-  --color-bg:        #1a0e1e;
-  --color-surface:   #261628;
-  --color-surface2:  #1e1020;
-  --color-surface3:  #321e38;
+  /* Punjabi — cream & gold traditional */
+  --color-bg:        #f5efe0;
+  --color-surface:   #ece5d2;
+  --color-surface2:  #f0e8d8;
+  --color-surface3:  #e5dcc8;
 
-  --color-accent:    #e8a820;   /* turmeric gold */
-  --color-accent2:   #f0c850;   /* bright haldi */
-  --color-accent3:   #9a3070;   /* plum pink */
+  --color-accent:    #c49a2a;   /* deep gold */
+  --color-accent2:   #d4a830;   /* bright gold */
+  --color-accent3:   #8b2a3a;   /* wedding maroon */
   --color-accent4:   #c41e3a;   /* Punjabi red */
 
-  --color-text:      #fdf0d5;   /* warm cream */
-  --color-muted:     #9a7a8a;   /* mauve */
-  --color-border:    rgba(232, 168, 32, 0.25);
-  --color-border-strong: rgba(232, 168, 32, 0.5);
+  --color-text:      #2a2018;   /* dark brown */
+  --color-muted:     #8a7a68;   /* dusty brown */
+  --color-border:    rgba(196, 154, 42, 0.2);
+  --color-border-strong: rgba(196, 154, 42, 0.45);
 
-  --color-glow:      rgba(232, 168, 32, 0.15);
-  --color-glow-strong: rgba(232, 168, 32, 0.4);
-  --color-glow-lotus: rgba(240, 200, 80, 0.45);
+  --color-glow:      rgba(196, 154, 42, 0.1);
+  --color-glow-strong: rgba(196, 154, 42, 0.3);
+  --color-glow-lotus: rgba(196, 154, 42, 0.25);
 }
 
 /* ── Keyframes ─────────────────────────────────────────────── */
@@ -60,11 +60,11 @@
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    var(--color-accent) 0%,
-    #f5d870 30%,
-    #fff0a0 50%,
-    #f5d870 70%,
-    var(--color-accent) 100%
+    #2a2018 0%,
+    var(--color-accent) 30%,
+    #d4a830 50%,
+    var(--color-accent) 70%,
+    #2a2018 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -88,7 +88,7 @@
 }
 
 .pichwai-shadow {
-  box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 0 0 1px var(--color-border);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.1), 0 0 0 1px var(--color-border);
 }
 
 /* ── Ganesha glow ── */

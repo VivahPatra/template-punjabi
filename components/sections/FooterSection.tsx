@@ -68,7 +68,7 @@ export default function FooterSection() {
               <div style={{
                 position: 'absolute', left: '50%', bottom: d.size * 0.08, transform: 'translateX(-50%)',
                 width: d.size * 1.8, height: d.size * 0.25, borderRadius: '50%',
-                background: 'radial-gradient(ellipse, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, transparent 75%)',
+                background: 'radial-gradient(ellipse, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.2) 50%, transparent 75%)',
                 filter: 'blur(3px)',
               }} />
               <div style={{ position: 'absolute', left: '50%', bottom: d.size * 0.12, transform: 'translateX(-50%)', zIndex: 1 }}>

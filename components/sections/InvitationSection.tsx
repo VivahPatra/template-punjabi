@@ -31,8 +31,8 @@ export default function InvitationSection() {
           variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
           data-cursor-glow
           className="relative rounded-2xl overflow-hidden"
-          style={{ background: 'var(--color-bg)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 60px rgba(200,146,42,0.12), 0 20px 60px rgba(0,0,0,0.5)' }}
-          whileHover={{ boxShadow: '0 0 80px rgba(200,146,42,0.3), 0 0 40px rgba(200,146,42,0.2), 0 20px 60px rgba(0,0,0,0.5)' }}
+          style={{ background: 'var(--color-bg)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 60px rgba(200,146,42,0.12), 0 20px 60px rgba(0,0,0,0.08)' }}
+          whileHover={{ boxShadow: '0 0 80px rgba(200,146,42,0.3), 0 0 40px rgba(200,146,42,0.2), 0 20px 60px rgba(0,0,0,0.08)' }}
           transition={{ duration: 0.4 }}
         >
 

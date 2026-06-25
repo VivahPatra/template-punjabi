@@ -102,7 +102,7 @@ export default function ShowcaseSection() {
         {/* Left wall inner shadow */}
         <div className="absolute inset-0 pointer-events-none" style={{
           clipPath: 'polygon(0 0, 35% 18%, 35% 82%, 0 100%)',
-          background: 'linear-gradient(to right, rgba(0,0,0,0.4) 0%, transparent 60%)',
+          background: 'linear-gradient(to right, rgba(0,0,0,0.06) 0%, transparent 60%)',
         }} />
 
         {/* Right trapezoid — wider, with shading */}
@@ -113,7 +113,7 @@ export default function ShowcaseSection() {
         {/* Right wall inner shadow */}
         <div className="absolute inset-0 pointer-events-none" style={{
           clipPath: 'polygon(65% 18%, 100% 0, 100% 100%, 65% 82%)',
-          background: 'linear-gradient(to left, rgba(0,0,0,0.4) 0%, transparent 60%)',
+          background: 'linear-gradient(to left, rgba(0,0,0,0.06) 0%, transparent 60%)',
         }} />
 
 

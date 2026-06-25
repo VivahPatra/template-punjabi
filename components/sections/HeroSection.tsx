@@ -137,8 +137,8 @@ export default function HeroSection() {
               animation: 'reflectionWave 3s ease-in-out infinite',
               opacity: 0.4,
               filter: 'brightness(0.7) blur(1.5px) contrast(0.8)',
-              maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 50%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 50%, transparent 100%)',
+              maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 50%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 50%, transparent 100%)',
             }} />
           </div>
         </motion.div>
@@ -221,7 +221,7 @@ export default function HeroSection() {
               <div style={{
                 position: 'absolute', left: '50%', bottom: d.size * 0.08, transform: 'translateX(-50%)',
                 width: d.size * 1.8, height: d.size * 0.25, borderRadius: '50%',
-                background: 'radial-gradient(ellipse, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, transparent 75%)',
+                background: 'radial-gradient(ellipse, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.2) 50%, transparent 75%)',
                 filter: 'blur(3px)',
               }} />
               {/* Fixed ripple rings — tighter */}

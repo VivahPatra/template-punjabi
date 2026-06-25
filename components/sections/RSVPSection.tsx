@@ -27,7 +27,7 @@ export default function RSVPSection() {
         <motion.div
           variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
           className="relative rounded-2xl p-10 text-center"
-          style={{ background: 'var(--color-bg)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 40px var(--color-glow), 0 20px 50px rgba(0,0,0,0.4)' }}
+          style={{ background: 'var(--color-bg)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 40px var(--color-glow), 0 20px 50px rgba(0,0,0,0.06)' }}
         >
           <p className="font-serif text-base leading-relaxed mb-3" style={{ color: 'var(--color-muted)' }}>
             {weddingData.rsvpText || 'We joyfully request the honour of your presence at our wedding celebration.'}
@@ -41,7 +41,7 @@ export default function RSVPSection() {
               href={whatsapp}
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full font-sans text-sm font-semibold tracking-wider"
-              style={{ background: 'var(--color-accent)', color: '#0e1208', boxShadow: '0 0 24px var(--color-glow-strong)' }}
+              style={{ background: 'var(--color-accent)', color: '#fff', boxShadow: '0 0 24px var(--color-glow-strong)' }}
               whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(212,160,23,0.6)' }}
               whileTap={{ scale: 0.97 }}
             >
