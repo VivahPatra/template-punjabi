@@ -14,9 +14,9 @@
 :root {
   /* Punjabi — Saffron & Cream */
   --color-bg:        #fdf5e8;   /* warm cream */
-  --color-surface:   #e87830;   /* saffron */
+  --color-surface:   #c85a18;   /* deep saffron — 2 shades darker */
   --color-surface2:  #f5ede0;   /* soft cream */
-  --color-surface3:  #d06828;   /* deep saffron */
+  --color-surface3:  #a84a10;   /* deeper saffron */
 
   --color-accent:    #c49a2a;   /* deep gold */
   --color-accent2:   #e8a020;   /* orange gold */
@@ -109,10 +109,13 @@
 }
 
 /* Light text on saffron surface sections */
-.on-saffron { color: #2a1810; }
+.on-saffron { color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+.on-saffron p, .on-saffron span { text-shadow: 0 1px 2px rgba(0,0,0,0.25); }
 .on-saffron .shimmer-text {
-  background: linear-gradient(90deg, #2a1810 0%, #fdf5e8 30%, #fff 50%, #fdf5e8 70%, #2a1810 100%);
+  background: linear-gradient(90deg, #fff 0%, #fde8a0 30%, #fff 50%, #fde8a0 70%, #fff 100%);
   background-size: 200% auto;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
 }
+.on-saffron .glow-pulse { color: #fde8a0; }
