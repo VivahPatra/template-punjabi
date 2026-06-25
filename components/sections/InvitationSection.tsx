@@ -45,9 +45,9 @@ export default function InvitationSection() {
             <div className="flex flex-col items-center mb-4">
               <div style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div className="ganesha-backdrop" style={{ position: 'absolute', inset: -8, borderRadius: '50%', background: 'radial-gradient(circle, rgba(212,160,23,0.7) 0%, rgba(212,160,23,0.3) 50%, transparent 75%)', filter: 'blur(12px)' }} />
-                <span className="ganesha-glow font-display" style={{ fontSize: '3.5rem', color: 'var(--color-accent)', position: 'relative', zIndex: 1, lineHeight: 1 }}>ੴ</span>
+                <span className="shimmer-text font-display" style={{ fontSize: '3.5rem', position: 'relative', zIndex: 1, lineHeight: 1 }}>ੴ</span>
               </div>
-              <p className="font-sans text-xs tracking-[0.3em] uppercase mt-3 glow-pulse" style={{ color: 'var(--color-accent)', opacity: 0.6 }}>
+              <p className="font-sans text-xs tracking-[0.3em] uppercase mt-3" style={{ color: '#3a2a1e' }}>
                 {weddingData.invitationBlessing || 'ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖ਼ਾਲਸਾ, ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫ਼ਤਿਹ'}
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function InvitationSection() {
               {weddingData.brideName}
             </h3>
             {weddingData.brideParents && (
-              <p className="font-sans text-xs tracking-wide mt-1 mb-2" style={{ color: 'var(--color-muted)', opacity: 0.7 }}>
+              <p className="font-sans text-xs tracking-wide mt-1 mb-2" style={{ color: '#3a2a1e' }}>
                 Daughter of {weddingData.brideParents}
               </p>
             )}
@@ -75,7 +75,7 @@ export default function InvitationSection() {
               {weddingData.groomName}
             </h3>
             {weddingData.groomParents && (
-              <p className="font-sans text-xs tracking-wide mt-1" style={{ color: 'var(--color-muted)', opacity: 0.7 }}>
+              <p className="font-sans text-xs tracking-wide mt-1" style={{ color: '#3a2a1e' }}>
                 Son of {weddingData.groomParents}
               </p>
             )}

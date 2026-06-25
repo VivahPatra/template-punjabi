@@ -55,9 +55,9 @@ export default function CoupleStory() {
                       </motion.div>
                     )}
                     {/* Text */}
-                    <p className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-accent)', opacity: 0.65 }}>{milestone.date}</p>
-                    <h3 className="font-display text-2xl mb-2 glow-text" style={{ color: 'var(--color-accent)' }}>{milestone.title}</h3>
-                    <p className="font-serif text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>{milestone.description}</p>
+                    <p className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-accent)', textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}>{milestone.date}</p>
+                    <h3 className="font-display text-2xl mb-2" style={{ color: 'var(--color-accent)', textShadow: '0 2px 8px rgba(0,0,0,0.35)' }}>{milestone.title}</h3>
+                    <p className="font-serif text-sm leading-relaxed" style={{ color: '#fff' }}>{milestone.description}</p>
                   </div>
 
                   {/* Timeline node */}

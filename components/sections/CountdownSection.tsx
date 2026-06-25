@@ -51,7 +51,7 @@ export default function CountdownSection() {
             <motion.div
               key={label}
               className="relative rounded-2xl overflow-hidden text-center py-8 px-4"
-              style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 24px var(--color-glow)' }}
+              style={{ background: 'linear-gradient(160deg, #c85a18 0%, #e87830 50%, #d06828 100%)', border: '1px solid rgba(232,160,48,0.4)', boxShadow: '0 4px 24px rgba(200,120,48,0.2)' }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -62,8 +62,8 @@ export default function CountdownSection() {
               <div className="absolute bottom-0 right-0 w-8 h-8 opacity-40" style={{ background: 'radial-gradient(circle at bottom right, var(--color-accent), transparent)' }} />
 
               <motion.p
-                className="shimmer-text font-display"
-                style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', lineHeight: 1 }}
+                className="font-display"
+                style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', lineHeight: 1, color: '#fff', textShadow: '0 2px 8px rgba(0,0,0,0.2)' }}
                 key={value}
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -71,7 +71,7 @@ export default function CountdownSection() {
               >
                 {String(value).padStart(2, '0')}
               </motion.p>
-              <p className="font-sans text-xs tracking-widest uppercase mt-2" style={{ color: 'var(--color-accent)', opacity: 0.6 }}>
+              <p className="font-sans text-xs tracking-widest uppercase mt-2" style={{ color: '#fde8a0' }}>
                 {label}
               </p>
             </motion.div>
