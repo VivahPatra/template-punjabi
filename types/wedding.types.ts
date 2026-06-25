@@ -57,4 +57,5 @@ export interface WeddingConfig {
   venue: { name: string; address: string; mapUrl: string }
   rsvp: { whatsappNumber: string; message: string; deadline: string }
   socialLinks?: { instagram?: string }
+  sections?: Record<string, boolean>
 }

@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import { formatShortDate } from '@/lib/utils'
 import { useWeddingData } from '@/context/WeddingDataContext'
 import LotusDivider from '@/components/ui/LotusDivider'
 
@@ -15,7 +16,7 @@ export default function FooterSection() {
           {weddingData.brideName} &amp; {weddingData.groomName}
         </p>
         <p className="font-sans text-xs tracking-[0.4em] uppercase mb-8" style={{ color: 'var(--color-accent)', opacity: 0.6 }}>
-          20 December 2026
+          {formatShortDate(weddingData.weddingDate)}
         </p>
 
         <p className="font-serif italic text-sm mb-8" style={{ color: 'var(--color-muted)' }}>

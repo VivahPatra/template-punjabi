@@ -16,6 +16,7 @@ import RSVPSection from '@/components/sections/RSVPSection'
 import CountdownSection from '@/components/sections/CountdownSection'
 import ShowcaseSection from '@/components/sections/ShowcaseSection'
 import FooterSection from '@/components/sections/FooterSection'
+import SectionGate from '@/components/ui/SectionGate'
 
 export default function Page() {
   const [loaded, setLoaded] = useState(false)
@@ -32,30 +33,48 @@ export default function Page() {
           <FloatingFABs />
           <div className="relative overflow-x-hidden">
             <main>
-              <HeroSection />
+              <SectionGate name="hero">
+                <HeroSection />
+              </SectionGate>
               <ShowerDivider />
 
-              <InvitationSection />
+              <SectionGate name="invitation">
+                <InvitationSection />
+              </SectionGate>
               <ShowerDivider />
 
-              <EventsSection />
+              <SectionGate name="events">
+                <EventsSection />
+              </SectionGate>
               <ShowerDivider />
 
-              <CoupleStory />
+              <SectionGate name="coupleStory">
+                <CoupleStory />
+              </SectionGate>
               <ShowerDivider />
 
-              <GallerySection />
+              <SectionGate name="gallery">
+                <GallerySection />
+              </SectionGate>
               <ShowerDivider />
 
-              <RSVPSection />
+              <SectionGate name="rsvp">
+                <RSVPSection />
+              </SectionGate>
               <ShowerDivider />
 
-              <CountdownSection />
+              <SectionGate name="countdown">
+                <CountdownSection />
+              </SectionGate>
               <ShowerDivider />
 
-              <ShowcaseSection />
+              <SectionGate name="showcase">
+                <ShowcaseSection />
+              </SectionGate>
 
-              <FooterSection />
+              <SectionGate name="footer">
+                <FooterSection />
+              </SectionGate>
             </main>
           </div>
         </>
