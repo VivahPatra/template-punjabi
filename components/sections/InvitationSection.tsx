@@ -10,7 +10,7 @@ export default function InvitationSection() {
   const weddingData = useWeddingData()
 
   return (
-    <section id="invitation" className="relative overflow-hidden py-28 px-6" style={{ background: 'var(--color-surface)' }}>
+    <section id="invitation" className="relative overflow-hidden py-28 px-6 on-brown" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />
       <div className="max-w-3xl mx-auto">
         <motion.div

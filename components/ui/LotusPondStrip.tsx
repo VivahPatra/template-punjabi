@@ -32,7 +32,7 @@ export default function LotusPondStrip({ bgColor = 'transparent' }: Props) {
         <motion.div
           key={i}
           className="absolute left-0 right-0 h-px"
-          style={{ top: `${pct}%`, background: 'linear-gradient(to right, transparent, rgba(200,146,42,0.15), transparent)' }}
+          style={{ top: `${pct}%`, background: 'linear-gradient(to right, transparent, rgba(196,154,42,0.35), rgba(212,168,48,0.5), rgba(196,154,42,0.35), transparent)' }}
           animate={{ scaleX: [0.7, 1.05, 0.7], opacity: [0.2, 0.55, 0.2] }}
           transition={{ duration: 4 + i, repeat: Infinity, delay: i * 0.8, ease: 'easeInOut' }}
         />

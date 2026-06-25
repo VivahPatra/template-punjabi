@@ -18,7 +18,7 @@ export default function GallerySection() {
   const [selected, setSelected] = useState<string | null>(null)
 
   return (
-    <section id="gallery" className="relative overflow-hidden py-28 overflow-hidden" style={{ background: 'var(--color-surface)' }}>
+    <section id="gallery" className="relative overflow-hidden py-28 on-brown" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />
       <div className="max-w-6xl mx-auto px-6">
         <motion.div

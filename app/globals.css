@@ -14,9 +14,11 @@
 :root {
   /* Punjabi — cream & gold traditional */
   --color-bg:        #f5efe0;
-  --color-surface:   #ece5d2;
+  --color-surface:   #3a2a1e;   /* warm brown for alternate sections */
   --color-surface2:  #f0e8d8;
-  --color-surface3:  #e5dcc8;
+  --color-surface3:  #2e2016;   /* deeper brown */
+
+  --color-water:     linear-gradient(180deg, #c49a2a 0%, #d4a830 40%, #e8c050 100%);  /* gold gradient for water */
 
   --color-accent:    #c49a2a;   /* deep gold */
   --color-accent2:   #d4a830;   /* bright gold */
@@ -107,3 +109,7 @@
 .ganesha-backdrop {
   animation: ganeshBackdrop 2.5s ease-in-out infinite;
 }
+
+/* Light text on brown surface sections */
+.on-brown { color: #f5efe0; }
+.on-brown .glow-pulse { color: #c49a2a; }
