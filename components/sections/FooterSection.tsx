@@ -34,8 +34,8 @@ export default function FooterSection() {
         </p>
       </div>
 
-      {/* Floating diyas at bottom */}
-      <div className="relative w-full" style={{ height: 120 }}>
+      {/* Floating diyas at bottom — break out of padding */}
+      <div className="relative" style={{ height: 120, marginLeft: '-1.5rem', marginRight: '-1.5rem', width: 'calc(100% + 3rem)' }}>
         <style>{`
           @keyframes footerDiyaFloat {
             0%, 100% { transform: translateY(0) rotate(-1deg); }

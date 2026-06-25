@@ -140,7 +140,7 @@ export default function EventsSection() {
   return (
     <section id="events" className="relative overflow-hidden py-28 px-6 relative overflow-hidden" style={{ background: 'var(--color-surface2)' }}>
       <FlowerOverlay />
-      <img src="/assets/gurud.png" alt="" className="w-[120px] sm:w-[170px] md:w-[220px]" style={{ position: 'absolute', bottom: 24, right: 0, height: 'auto', opacity: 0.65, filter: 'brightness(1.2)', pointerEvents: 'none' }} />
+      <img src="/assets/gurud.png" alt="" onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }} className="w-[120px] sm:w-[170px] md:w-[220px]" style={{ position: 'absolute', bottom: 24, right: 0, height: 'auto', opacity: 0.65, filter: 'brightness(1.2)', pointerEvents: 'none' }} />
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <motion.div

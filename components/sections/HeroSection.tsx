@@ -25,7 +25,7 @@ export default function HeroSection() {
       {/* Parallax background */}
       <div className="absolute inset-0">
         <motion.img
-          src="/assets/palace.png"
+          src="/assets/palace.png" onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
           alt=""
           style={{
             position: 'absolute',
