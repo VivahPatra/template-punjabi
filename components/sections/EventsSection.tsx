@@ -16,7 +16,7 @@ function EventNode({
   delay?: number
 }) {
   const color = event.color || 'var(--color-accent)'
-  const circleSize = isHero ? 160 : 130
+  const circleSize = isHero ? 200 : 160
   const mapUrl = `https://maps.google.com/?q=${encodeURIComponent(event.venue + ', ' + event.venueAddress)}`
 
   return (
@@ -58,7 +58,7 @@ function EventNode({
             src={event.image}
             alt={event.name}
             className="absolute inset-0 rounded-full object-cover"
-            style={{ width: '100%', height: '100%', filter: 'brightness(0.9) saturate(1)' }}
+            style={{ width: '100%', height: '100%', filter: 'brightness(1) saturate(1)' }}
             loading="lazy"
           />
         ) : (
