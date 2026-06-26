@@ -57,7 +57,7 @@ function EventNode({
           <img
             src={event.image}
             alt={event.name}
-            className="absolute inset-0 rounded-full object-contain p-3"
+            className="absolute inset-0 object-contain"
             style={{ width: '100%', height: '100%' }}
             loading="lazy"
           />
