@@ -16,7 +16,7 @@ function EventNode({
   delay?: number
 }) {
   const color = event.color || 'var(--color-accent)'
-  const circleSize = isHero ? 200 : 160
+  const circleSize = isHero ? 130 : 100
   const mapUrl = `https://maps.google.com/?q=${encodeURIComponent(event.venue + ', ' + event.venueAddress)}`
 
   return (
