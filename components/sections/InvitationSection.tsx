@@ -67,7 +67,7 @@ export default function InvitationSection() {
             </h3>
             {weddingData.brideParents && (
               <p className="font-sans text-xs tracking-wide mt-1 mb-2" style={{ color: '#fdf0d5' }}>
-                Daughter of {weddingData.brideParents}
+                {weddingData.groomFirst === false ? 'Son' : 'Daughter'} of {weddingData.brideParents}
               </p>
             )}
             <p className="font-serif italic text-xl mt-2 mb-2" style={{ color: '#fde8a0', opacity: 0.8 }}>&amp;</p>
@@ -76,7 +76,7 @@ export default function InvitationSection() {
             </h3>
             {weddingData.groomParents && (
               <p className="font-sans text-xs tracking-wide mt-1" style={{ color: '#fdf0d5' }}>
-                Son of {weddingData.groomParents}
+                {weddingData.groomFirst === false ? 'Daughter' : 'Son'} of {weddingData.groomParents}
               </p>
             )}
 
