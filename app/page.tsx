@@ -12,6 +12,7 @@ import InvitationSection from '@/components/sections/InvitationSection'
 import EventsSection from '@/components/sections/EventsSection'
 import CoupleStory from '@/components/sections/CoupleStory'
 import GallerySection from '@/components/sections/GallerySection'
+import VenueSection from '@/components/sections/VenueSection'
 import RSVPSection from '@/components/sections/RSVPSection'
 import CountdownSection from '@/components/sections/CountdownSection'
 import ShowcaseSection from '@/components/sections/ShowcaseSection'
@@ -55,6 +56,11 @@ export default function Page() {
 
               <SectionGate name="gallery">
                 <GallerySection />
+              </SectionGate>
+              <ShowerDivider />
+
+              <SectionGate name="venue">
+                <VenueSection />
               </SectionGate>
               <ShowerDivider />
 
