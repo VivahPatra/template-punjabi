@@ -134,7 +134,7 @@ export default function ShowcaseSection() {
               }
             `}</style>
             <img
-              src="/assets/3d.png"
+              src="/assets/3d.webp"
               alt="Anand Karaj Ceremony"
               className="max-w-[160px] sm:max-w-[180px] md:max-w-[220px] block"
               style={{ height: 'auto', filter: 'brightness(1.05) saturate(1.1)' }}

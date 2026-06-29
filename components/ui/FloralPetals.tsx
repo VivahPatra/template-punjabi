@@ -44,7 +44,7 @@ export default function FloralPetals({ count = 20 }: { count?: number }) {
             animation: `petalDrop ${p.duration}s ${p.delay}s ease-in infinite`,
           }}
         >
-          <img src="/assets/leaf.png" alt="" style={{ width: p.size * 2, height: 'auto', opacity: 0.65, transform: `rotate(${p.rotation}deg)`, filter: 'brightness(1.3) hue-rotate(-10deg) saturate(1.4)' }} />
+          <img src="/assets/leaf.webp" alt="" style={{ width: p.size * 2, height: 'auto', opacity: 0.65, transform: `rotate(${p.rotation}deg)`, filter: 'brightness(1.3) hue-rotate(-10deg) saturate(1.4)' }} />
         </div>
       ))}
     </div>

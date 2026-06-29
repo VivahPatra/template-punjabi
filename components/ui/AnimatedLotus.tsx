@@ -7,7 +7,7 @@ interface Props {
   className?: string
   style?: React.CSSProperties
   bloom?: boolean
-  /** Drop your lotus image at /assets/lotus.png — replaces SVG petals, keeps all animations */
+  /** Drop your lotus image at /assets/lotus.webp — replaces SVG petals, keeps all animations */
   imageSrc?: string
 }
 
@@ -53,7 +53,7 @@ export default function AnimatedLotus({ size = 120, delay = 0, className = '', s
       ))}
 
       {imageSrc ? (
-        /* ── Image mode: your lotus.png fills the bloom area ── */
+        /* ── Image mode: your lotus.webp fills the bloom area ── */
         <>
           {/* Green sepals peeking behind */}
           {[0, 60, 120, 180, 240, 300].map((deg, i) => (

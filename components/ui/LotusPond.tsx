@@ -69,7 +69,7 @@ export default function LotusPond({ className = '' }: { className?: string; lotu
             animate={{ scale: 1, opacity: 0.5 }}
             transition={{ duration: 1, delay: pad.delay, ease: [0.22, 1, 0.36, 1] }}
           >
-            <img src="/assets/leaf.png" alt=""
+            <img src="/assets/leaf.webp" alt=""
               style={{ width: pad.r * 2, height: 'auto', filter: 'brightness(1)', transform: pad.flip ? 'scaleX(-1)' : undefined }} />
           </motion.div>
         ))}
@@ -88,7 +88,7 @@ export default function LotusPond({ className = '' }: { className?: string; lotu
             transition={{ duration: 4 + i * 0.6, repeat: Infinity, delay: i * 0.3, ease: 'easeInOut' }}
           >
             <img
-              src={i % 2 === 0 ? '/assets/lotus1.png' : '/assets/lotus3.png'}
+              src={i % 2 === 0 ? '/assets/lotus1.webp' : '/assets/lotus3.webp'}
               alt=""
               style={{ width: l.size, height: 'auto', filter: 'brightness(1)' }}
             />

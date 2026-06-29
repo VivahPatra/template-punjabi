@@ -10,15 +10,15 @@ export const weddingData: WeddingConfig = {
   tagline: 'Balle Balle! Two hearts, one soul',
   invitationText:
     'With Waheguru\'s blessings and the love of our families, Simran and Raj joyfully invite you to celebrate the beginning of their journey together. Your presence will make our celebration truly unforgettable.',
-  heroImage: '/assets/palace.png',
+  heroImage: '/assets/palace.webp',
 
   events: [
-    { id: 'roka', name: 'Roka', emoji: '🤝', date: 'December 20, 2026', time: '11:00 AM', venue: 'Gurudwara Sahib', venueAddress: 'Model Town, Ludhiana', image: '/assets/events/engagement.png', color: '#d4a017', description: 'The formal commitment of two families.' },
-    { id: 'mehendi', name: 'Mehendi', emoji: '🌿', date: 'December 22, 2026', time: '4:00 PM', venue: 'Haveli Grounds', venueAddress: 'GT Road, Amritsar', image: '/assets/events/mehendi.png', color: '#2d7a4f', description: 'Henna, music and Giddha night.' },
-    { id: 'sangeet', name: 'Sangeet', emoji: '🥁', date: 'December 23, 2026', time: '7:00 PM', venue: 'Royal Farmhouse', venueAddress: 'Jalandhar Highway, Ludhiana', image: '/assets/events/sangeet.png', color: '#c41e3a', description: 'Dhol, Bhangra and a night of celebration.' },
-    { id: 'haldi', name: 'Haldi', emoji: '✨', date: 'December 24, 2026', time: '10:00 AM', venue: 'Family Home', venueAddress: 'Rajpura Road, Patiala', image: '/assets/events/haldi.png', color: '#ff6b35', description: 'Turmeric, laughter and golden blessings.' },
-    { id: 'anand-karaj', name: 'Anand Karaj', emoji: '🙏', date: 'December 25, 2026', time: '9:00 AM', venue: 'Gurudwara Singh Sabha', venueAddress: 'Mall Road, Chandigarh', image: '/assets/events/wedding.png', color: '#d4a017', description: 'Four Lavaan, one eternal bond.' },
-    { id: 'reception', name: 'Reception', emoji: '🥂', date: 'December 25, 2026', time: '7:00 PM', venue: 'The Grand Taj', venueAddress: 'Sector 17, Chandigarh', image: '/assets/events/reception.png', color: '#c41e3a', description: 'Feast, dance and celebration of love.' },
+    { id: 'roka', name: 'Roka', emoji: '🤝', date: 'December 20, 2026', time: '11:00 AM', venue: 'Gurudwara Sahib', venueAddress: 'Model Town, Ludhiana', image: '/assets/events/engagement.webp', color: '#d4a017', description: 'The formal commitment of two families.' },
+    { id: 'mehendi', name: 'Mehendi', emoji: '🌿', date: 'December 22, 2026', time: '4:00 PM', venue: 'Haveli Grounds', venueAddress: 'GT Road, Amritsar', image: '/assets/events/mehendi.webp', color: '#2d7a4f', description: 'Henna, music and Giddha night.' },
+    { id: 'sangeet', name: 'Sangeet', emoji: '🥁', date: 'December 23, 2026', time: '7:00 PM', venue: 'Royal Farmhouse', venueAddress: 'Jalandhar Highway, Ludhiana', image: '/assets/events/sangeet.webp', color: '#c41e3a', description: 'Dhol, Bhangra and a night of celebration.' },
+    { id: 'haldi', name: 'Haldi', emoji: '✨', date: 'December 24, 2026', time: '10:00 AM', venue: 'Family Home', venueAddress: 'Rajpura Road, Patiala', image: '/assets/events/haldi.webp', color: '#ff6b35', description: 'Turmeric, laughter and golden blessings.' },
+    { id: 'anand-karaj', name: 'Anand Karaj', emoji: '🙏', date: 'December 25, 2026', time: '9:00 AM', venue: 'Gurudwara Singh Sabha', venueAddress: 'Mall Road, Chandigarh', image: '/assets/events/wedding.webp', color: '#d4a017', description: 'Four Lavaan, one eternal bond.' },
+    { id: 'reception', name: 'Reception', emoji: '🥂', date: 'December 25, 2026', time: '7:00 PM', venue: 'The Grand Taj', venueAddress: 'Sector 17, Chandigarh', image: '/assets/events/reception.webp', color: '#c41e3a', description: 'Feast, dance and celebration of love.' },
   ],
 
   galleryImages: [

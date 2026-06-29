@@ -52,7 +52,7 @@ export default function LotusPondStrip({ bgColor = 'transparent' }: Props) {
           transition={{ duration: 3.5 + i * 0.5, repeat: Infinity, delay: i * 0.25, ease: 'easeInOut' }}
         >
           <img
-            src={l.type === 'lotus' ? '/assets/lotus.png' : '/assets/leaf.png'}
+            src={l.type === 'lotus' ? '/assets/lotus.webp' : '/assets/leaf.webp'}
             alt=""
             style={{ width: l.size, height: 'auto', filter: 'brightness(1.3)' }}
           />

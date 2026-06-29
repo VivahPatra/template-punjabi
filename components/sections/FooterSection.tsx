@@ -63,7 +63,7 @@ export default function FooterSection() {
                 background: 'radial-gradient(circle, rgba(255,180,50,0.35) 0%, rgba(232,168,32,0.12) 40%, transparent 70%)',
                 filter: 'blur(6px)',
               }} />
-              <img src="/assets/floatdiya.png" alt="" className="lantern-glow"
+              <img src="/assets/floatdiya.webp" alt="" className="lantern-glow"
                 style={{ position: 'relative', zIndex: 2, width: d.size, height: 'auto', filter: 'brightness(1.3)', opacity: 0.85 }} />
               <div style={{
                 position: 'absolute', left: '50%', bottom: d.size * 0.08, transform: 'translateX(-50%)',

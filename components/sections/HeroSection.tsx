@@ -25,7 +25,7 @@ export default function HeroSection() {
       {/* Parallax background */}
       <div className="absolute inset-0">
         <motion.img
-          src="/assets/palace.png" onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
+          src="/assets/palace.webp" onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
           alt=""
           style={{
             position: 'absolute',
@@ -119,7 +119,7 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-col items-center mt-6" style={{ scale: goldenScale }}>
-          <img src="/assets/golden.png" alt="" style={{ width: 200, height: 'auto', opacity: 0.85, filter: 'brightness(1.2)' }} />
+          <img src="/assets/golden.webp" alt="" style={{ width: 200, height: 'auto', opacity: 0.85, filter: 'brightness(1.2)' }} />
           {/* Water reflection */}
           <div style={{ position: 'relative', overflow: 'hidden', height: 160, marginTop: -2 }}>
             <style>{`
@@ -131,7 +131,7 @@ export default function HeroSection() {
                 100% { transform: scaleY(-1) translateY(0) skewX(0deg); }
               }
             `}</style>
-            <img src="/assets/golden.png" alt="" style={{
+            <img src="/assets/golden.webp" alt="" style={{
               width: 200,
               height: 'auto',
               animation: 'reflectionWave 3s ease-in-out infinite',
@@ -206,7 +206,7 @@ export default function HeroSection() {
               }} />
               {/* Diya image */}
               <img
-                src="/assets/floatdiya.png"
+                src="/assets/floatdiya.webp"
                 alt=""
                 className="lantern-glow"
                 style={{
