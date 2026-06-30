@@ -62,7 +62,7 @@ export default function InvitationSection() {
               <line x1="0" y1="9.5" x2="280" y2="9.5" stroke="var(--color-accent)" strokeWidth="0.3" opacity="0.18" />
             </svg>
 
-            <h3 className="font-display" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)', lineHeight: 1, color: '#fff', textShadow: '0 2px 8px rgba(0,0,0,0.2)' }}>
+            <h3 className="font-display" style={{ fontSize: 'clamp(2.2rem, 6vw, 3.7rem)', lineHeight: 1.2, padding: '0.1em 0', color: '#fff', textShadow: '0 2px 8px rgba(0,0,0,0.2)' }}>
               {weddingData.brideName}
             </h3>
             {weddingData.brideParents && (
@@ -71,7 +71,7 @@ export default function InvitationSection() {
               </p>
             )}
             <p className="font-serif italic text-xl mt-2 mb-2" style={{ color: '#fde8a0', opacity: 0.8 }}>&amp;</p>
-            <h3 className="font-display" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)', lineHeight: 1, color: '#fff', textShadow: '0 2px 8px rgba(0,0,0,0.2)' }}>
+            <h3 className="font-display" style={{ fontSize: 'clamp(2.2rem, 6vw, 3.7rem)', lineHeight: 1.2, padding: '0.1em 0', color: '#fff', textShadow: '0 2px 8px rgba(0,0,0,0.2)' }}>
               {weddingData.groomName}
             </h3>
             {weddingData.groomParents && (
