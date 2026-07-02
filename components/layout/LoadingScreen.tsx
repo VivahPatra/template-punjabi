@@ -1,9 +1,25 @@
 'use client'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 interface Props { onComplete: () => void }
 
 export default function LoadingScreen({ onComplete }: Props) {
+  const [pct, setPct] = useState(0)
+  useEffect(() => {
+    let frame: number
+    const start = performance.now()
+    const duration = 2500
+    const tick = (now: number) => {
+      const elapsed = now - start
+      const next = Math.min(100, Math.round((elapsed / duration) * 100))
+      setPct(next)
+      if (next < 100) { frame = requestAnimationFrame(tick) }
+      else { onComplete() }
+    }
+    frame = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(frame)
+  }, [])
   return (
     <motion.div
       className="fixed inset-0 z-[200] flex flex-col items-center justify-center"
@@ -66,7 +82,6 @@ export default function LoadingScreen({ onComplete }: Props) {
         initial={{ width: 0 }}
         animate={{ width: 180 }}
         transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
-        onAnimationComplete={onComplete}
         className="h-px mb-6"
         style={{ background: 'linear-gradient(to right, transparent, var(--color-accent), transparent)' }}
       />
@@ -79,6 +94,17 @@ export default function LoadingScreen({ onComplete }: Props) {
       >
         ☬
       </motion.p>
-    </motion.div>
+  
+      {/* Percentage */}
+      <motion.p
+        className="font-sans text-xs tracking-[0.3em] mt-4"
+        style={{ color: 'var(--color-accent)', opacity: 0.6 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.6 }}
+        transition={{ delay: 0.3 }}
+      >
+        {pct}%
+      </motion.p>
+  </motion.div>
   )
 }
