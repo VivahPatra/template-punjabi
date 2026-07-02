@@ -12,6 +12,7 @@ export const weddingData: WeddingConfig = {
     'With Waheguru\'s blessings and the love of our families, Simran and Raj joyfully invite you to celebrate the beginning of their journey together. Your presence will make our celebration truly unforgettable.',
   heroImage: '/assets/palace.webp',
 
+  backgroundMusic: 'https://vivahpatra.co/music/aaj-sajeya.mp3',
   events: [
     { id: 'roka', name: 'Roka', emoji: '🤝', date: 'December 20, 2026', time: '11:00 AM', venue: 'Gurudwara Sahib', venueAddress: 'Model Town, Ludhiana', image: '/assets/events/engagement.webp', color: '#d4a017', description: 'The formal commitment of two families.' },
     { id: 'mehendi', name: 'Mehendi', emoji: '🌿', date: 'December 22, 2026', time: '4:00 PM', venue: 'Haveli Grounds', venueAddress: 'GT Road, Amritsar', image: '/assets/events/mehendi.webp', color: '#2d7a4f', description: 'Henna, music and Giddha night.' },
